@@ -23,13 +23,17 @@ $id = $_POST["id"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $botao = $_POST["botao"];
+$pesquisa = $_POST["pesquisa"];
 
 if(empty($botao)){
 
 }else if($botao == "Cadastrar"){
     $sql = "INSERT INTO funcionarios 
     (id, nome, cpf) VALUES('','$nome', '$cpf')";
-}
+}else if($botao == "Excluir"){
+    $sql = "DELETE FROM funcionarios"
+
+ }
 
 //aqui vou tratar erros nas operações C.E.R.A
 if(!empty($sql)){
@@ -67,8 +71,11 @@ if(!empty($selecionado)){
         <input type ="text" name = "nome" value="<?php echo $nome; ?>"/><br />
         <label>CPF</label>
         <input type ="text" name = "cpf" value="<?php echo $cpf; ?>"/><br />
-        <input type ="submit" name = "botao" value = "Cadastrar" />
-        <input type ="reset" name = "botao" value = "cancelar" />
+        <input type ="submit" name = "botao" value = "Cadastrar"/>
+        <input type ="submit" name = "botao" value = "Excluir"/>                                                                                                                                                            
+    <br/>
+    <imput type = "text" name = "pesquisa"/>
+    <imput type = "submit" name = "botao" value = "excluir"/>
     </form>
     <table>
         <tr>
