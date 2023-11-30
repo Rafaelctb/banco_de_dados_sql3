@@ -108,4 +108,8 @@ if(!empty($selecionado)){
         ?>
     </table>
     </body>
+    <head>
+        <title>Rafael SQL</title>
+    </head>
+    <h1>Edvaldo melhor professor do CEEP</h1>
 </html>
